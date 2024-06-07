@@ -1,4 +1,4 @@
-# UniPD-Template-Notes
+# UniPD-Swiss-Knife-Notes-Slides
 
 In this repo, you will find notes/projects templates for the following notes:
 
