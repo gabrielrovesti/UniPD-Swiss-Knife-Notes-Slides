@@ -1,4 +1,4 @@
-# UniPD-Template notes
+# UniPD-Template-Notes
 
 In this repo, you will find notes/projects templates for the following:
 
