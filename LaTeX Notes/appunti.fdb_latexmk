@@ -1,20 +1,20 @@
 # Fdb version 4
-["makeindex appunti.idx"] 1706270614 "appunti.idx" "appunti.ind" "appunti" 1706271111 0
-  "appunti.idx" 1706271111 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex appunti.idx"] 1706270614 "appunti.idx" "appunti.ind" "appunti" 1717755465 0
+  "appunti.idx" 1717755465 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "appunti.ilg"
   "appunti.ind"
   (rewritten before read)
-["pdflatex"] 1706271109 "c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-LaTeX-Notes/appunti.tex" "appunti.pdf" "appunti" 1706271111 0
-  "appendici/Appendice1.aux" 1706271111 2008 1e70cdcbac5a1b7d0b69bd72c0ccd33c "pdflatex"
-  "appendici/Appendice1.tex" 1706270470 181 24ed6ee1a9c48786f7b2302293cfa927 ""
-  "appunti.aux" 1706271111 2715 4fc982001795c0d3ddc42a30deea3a57 "pdflatex"
-  "appunti.ind" 1706270614 0 d41d8cd98f00b204e9800998ecf8427e "makeindex appunti.idx"
-  "appunti.lof" 1706271111 100 58c0a34556a32115d110f6eb26eb16ff "pdflatex"
-  "appunti.tex" 1706271106 1181 c89ef6c32daac70bd227fda968b9b18c ""
-  "appunti.toc" 1706271111 1006 421d0321285a805e5d8f5827c8165663 "pdflatex"
-  "biblio/biblio.tex" 1706270361 209 a6581c662c7894c9299a16558cb2a86c ""
-  "c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-LaTeX-Notes/appunti.tex" 1706271106 1181 c89ef6c32daac70bd227fda968b9b18c ""
+["pdflatex"] 1717755464 "c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-Template-Notes/LaTeX Notes/appunti.tex" "appunti.pdf" "appunti" 1717755465 0
+  "appendici/Appendice1.aux" 1717755465 2008 1e70cdcbac5a1b7d0b69bd72c0ccd33c "pdflatex"
+  "appendici/Appendice1.tex" 1717754085 181 24ed6ee1a9c48786f7b2302293cfa927 ""
+  "appunti.aux" 1717755465 2715 4fc982001795c0d3ddc42a30deea3a57 "pdflatex"
+  "appunti.ind" 1717754085 0 d41d8cd98f00b204e9800998ecf8427e "makeindex appunti.idx"
+  "appunti.lof" 1717755465 100 58c0a34556a32115d110f6eb26eb16ff "pdflatex"
+  "appunti.tex" 1717755458 1181 c89ef6c32daac70bd227fda968b9b18c ""
+  "appunti.toc" 1717755465 1006 421d0321285a805e5d8f5827c8165663 "pdflatex"
+  "biblio/biblio.tex" 1717754085 209 a6581c662c7894c9299a16558cb2a86c ""
+  "c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-Template-Notes/LaTeX Notes/appunti.tex" 1717755458 1181 c89ef6c32daac70bd227fda968b9b18c ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1676627787 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1676629173 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1676628561 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -153,8 +153,8 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1676635013 4662804 131178ccc9b2f4741a821427ce79dce1 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1676635190 7879501 d12c60f433e2a6757ae03a62f38f290d ""
   "c:/texlive/2022/texmf.cnf" 1676634991 713 e69b156964470283e0530f5060668171 ""
-  "capitoli/Capitolo1.aux" 1706271111 1964 c1d6550ce67c010e4b6abf149d951859 "pdflatex"
-  "capitoli/Capitolo1.tex" 1706270784 192 7509d815cc9ddcf83365a55d59260e74 ""
+  "capitoli/Capitolo1.aux" 1717755465 1964 c1d6550ce67c010e4b6abf149d951859 "pdflatex"
+  "capitoli/Capitolo1.tex" 1717754085 192 7509d815cc9ddcf83365a55d59260e74 ""
   (generated)
   "appendici/Appendice1.aux"
   "appunti.aux"

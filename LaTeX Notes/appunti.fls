@@ -1,8 +1,8 @@
-PWD c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-LaTeX-Notes
+PWD c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-Template-Notes/LaTeX Notes
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-LaTeX-Notes/appunti.tex
+INPUT c:/Users/roves/OneDrive/Documenti/GitHub/UniPD-Template-Notes/LaTeX Notes/appunti.tex
 OUTPUT appunti.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/base/report.cls
