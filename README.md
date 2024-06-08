@@ -8,6 +8,8 @@ In this repo, you will find notes/projects templates for the following notes:
 
 - Typst (based on Alberto Lazari notes and edited accordingly)
 
+- Markdown (easy and simple, like I would do)
+
 You will also find the following slides templates:
 
 - _Beamer_ (LaTeX) slides, based on a minimal working example (Generic) and Francesco De Faveri Beamer Template (Beamer Slides)
