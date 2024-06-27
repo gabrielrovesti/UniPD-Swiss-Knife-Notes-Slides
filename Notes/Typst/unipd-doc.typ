@@ -1,9 +1,3 @@
-// Comment-style lecture number annotation (# Lecture n)
-#let lecture(number) = {
-  set text(gray)
-  [\# Lecture #number]
-}
-
 #let notes() = doc => {
   set text(font: "Arial")
   doc
