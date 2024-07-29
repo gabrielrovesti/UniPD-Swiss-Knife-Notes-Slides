@@ -32,15 +32,23 @@
     pagebreak()
   })
 
+  // For normal TOC appearance
+
+  // show outline.entry: it => {
+  //   set text(weight: "regular")
+  //   it
+  // }
   show outline.entry.where(level: 1): it => {
     v(1em, weak: true)
     strong(it)
   }
 
   outline(
-    title: "Index",
+    title: "Table of contents",
     indent: 2em,
   )
+  pagebreak()
+  outline(title: "Figures", target: figure.where(kind: image))
   pagebreak()
 
   doc
