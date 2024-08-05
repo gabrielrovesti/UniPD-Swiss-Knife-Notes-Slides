@@ -49,6 +49,7 @@
   )
   pagebreak()
   outline(title: "Figures", target: figure.where(kind: image))
+  outline(title: "List of Tables", target: figure.where(kind: table))
   pagebreak()
 
   doc
