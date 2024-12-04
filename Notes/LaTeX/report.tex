@@ -1,0 +1,110 @@
+
+\documentclass[a4paper,11pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[english, italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[xindy]{imakeidx}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{etaremune}
+\usepackage{enumitem}
+\usepackage[toc,page]{appendix}
+\usepackage{verbatimbox}
+
+\usepackage[hidelinks, colorlinks=true]{hyperref}	
+\usepackage{bookmark}
+\usepackage{caption}
+\usepackage{subfig}
+
+\captionsetup{tableposition=top, figureposition=bottom, font=small}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\usepackage{epigraph}
+
+\makeindex
+		
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \begin{LARGE}
+            \textbf{University of Padua}\\
+        \end{LARGE}
+
+        \vspace{10pt}
+
+        \begin{Large}
+            \textsc{Department of Mathematics "Tullio Levi-Civita"}\\
+        \end{Large}
+
+        \vspace{10pt}
+
+        \begin{large}
+            \textsc{Master Degree in Computer Science}\\
+        \end{large}
+
+        \vspace{30pt}
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[height=6cm]{unipd-logo}
+        \end{figure}
+        \vspace{30pt}
+
+        \begin{LARGE}
+            \textbf{Title}\\
+        \end{LARGE}
+
+        \vspace{10pt}
+
+        \begin{Large}
+            \text{Course}\\
+            \vspace{40pt}
+            Pinotto Gianni\space- 1234567\\
+            \vspace{10pt}
+            \textsc{Academic year 2024-25}
+        \end{Large}
+
+        \begin{normalsize}
+        \end{normalsize}
+    \end{center}
+\end{titlepage}
+
+
+\hypersetup{linkcolor=black}
+\tableofcontents
+
+\newpage
+
+\hypersetup{linkcolor=blue, urlcolor=blue}
+
+\include{capitoli/capitolo1}
+
+\begin{appendices}
+
+\include{appendici/Appendice1}
+
+\end{appendices}
+
+%\newpage
+	\input{biblio/biblio}
+
+\end{document}	
+
+
+
+
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+    \begin{center}
+    \includegraphics[width=8cm]{unipd-logo.png}\\[2cm]
+    \Large\textbf{Lorem ipsum}\\[1em]
+    \large\textit{Master's Thesis}\\[2cm]
+    \Large\textbf{University of Padua}\\[1em]
+    Department of Mathematics "Tullio Levi-Civita"\\[1em]
+    Master Degree in Computer Science\\[2cm]
+    \end{center}
+    \end{titlepage}
+}
