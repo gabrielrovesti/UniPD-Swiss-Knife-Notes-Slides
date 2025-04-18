@@ -13,7 +13,6 @@ UniPD-Swiss-Knife-Notes-Slides/
 └── Slides/                    # Templates for presentations
     ├── Beamer/                # Beamer (LaTeX) templates for slides
     ├── Powerpoint/            # PowerPoint templates with UniPD style
-    └── Typst/                 # Typst templates for presentations
 ```
 
 ## Document Templates (Notes)
@@ -46,7 +45,6 @@ UniPD-Swiss-Knife-Notes-Slides/
 - Colors and styles consistent with UniPD branding
 
 ### Typst
-- Presentation template inspired by the work of Augusto Zanellato
 - Supports slides, transitions, and interactive components
 - Implements a background with a wave in the characteristic UniPD color
 
