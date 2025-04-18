@@ -1,11 +1,36 @@
+% Versione semplice (senza BibTeX)
+\begin{thebibliography}{99}
 
-\chapter*{Riferimenti}
+\bibitem{riferimento1}
+Autore, A., \& Coautore, B. (2023).
+\textit{Titolo dell'articolo}.
+Journal of Computer Science, 45(2), 112--128.
+\url{https://doi.org/10.1234/esempio}
 
-	\subsection*{Riferimento 1}
-		\url{http://www.google.it}
-		
-	\subsection*{Riferimento 2}
-		\url{http://www.google.it}
+\bibitem{riferimento2}
+Autore, C. (2024).
+\textit{Titolo del libro}.
+Editore, Città.
 
-\subsection*{Riferimento 2}
-\url{http://www.google.it}
+\bibitem{riferimento3}
+Sviluppatore, D. (2024).
+\textit{Nome del software} [Software].
+Versione 2.0.
+\url{https://esempio.com/software}
+
+\bibitem{riferimento4}
+Organizzazione. (2024).
+\textit{Titolo del report tecnico}.
+Report Tecnico n. TR-2024-01.
+\url{https://esempio.org/report}
+
+\end{thebibliography}
+
+% ALTERNATIVA: Per progetti più complessi, si consiglia di utilizzare BibLaTeX
+% Decommentare le seguenti righe e commentare la thebibliography sopra
+% Creare un file bibliografia.bib nella cartella biblio/
+
+% \usepackage[backend=biber, style=numeric-comp, sorting=none]{biblatex}
+% \addbibresource{biblio/bibliografia.bib}
+%
+% \printbibliography

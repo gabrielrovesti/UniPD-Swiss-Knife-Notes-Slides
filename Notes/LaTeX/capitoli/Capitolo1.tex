@@ -1,17 +1,82 @@
-\chapter{Project 1}
-	
-\section{Sezione} 
+\chapter{Introduzione}
 
-Ciaone
+\section{Contesto e Motivazione}
 
-\subsection{Introduction and Context}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{immagini/placeholder-figure.png}
+    \caption{Esempio di figura con didascalia.}
+    \label{fig:esempio-figura}
+\end{figure}
 
-\subsubsection{Sottosottosezione}
+In questa sezione viene introdotto il contesto generale e la motivazione del lavoro. Il riferimento a una figura può essere fatto così: Figura~\ref{fig:esempio-figura}.
 
-\paragraph{Paragrafo}
+\subsection{Stato dell'Arte}
+Lo stato dell'arte rappresenta una panoramica sulle conoscenze attuali e sugli sviluppi recenti nel campo oggetto di studio. È possibile evidenziare punti di interesse utilizzando \textcolor{unipd-red}{colori} o \textbf{grassetto}.
 
-\subparagraph{Sottoparagrafo}
+\subsubsection{Sottosezione con Formule}
+È possibile inserire formule matematiche nel testo $E = mc^2$ o in display:
 
+\begin{equation}
+    f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2\pi i \xi x} d\xi
+    \label{eq:esempio-formula}
+\end{equation}
 
-		
-	
+La formula~\ref{eq:esempio-formula} mostra un esempio di trasformata di Fourier inversa.
+
+\paragraph{Paragrafo con Elenco}
+È possibile creare elenchi numerati o puntati:
+
+\begin{itemize}
+    \item Primo elemento dell'elenco puntato
+    \item Secondo elemento con \textit{testo in corsivo}
+    \item Terzo elemento con riferimento all'equazione~\ref{eq:esempio-formula}
+\end{itemize}
+
+\subparagraph{Sottoparagrafo con Tabella}
+Le tabelle possono essere formattate in modo professionale:
+
+\begin{table}[htbp]
+    \centering
+    \caption{Esempio di tabella.}
+    \label{tab:esempio-tabella}
+    \begin{tabular}{lcr}
+        \toprule
+        \textbf{Intestazione 1} & \textbf{Intestazione 2} & \textbf{Intestazione 3} \\
+        \midrule
+        Valore 1 & Valore 2 & Valore 3 \\
+        Valore 4 & Valore 5 & Valore 6 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Esempio di Codice}
+È possibile includere blocchi di codice formattati:
+
+\begin{lstlisting}[language=Python, caption=Esempio di codice Python]
+def calcola_fibonacci(n):
+    """Calcola l'n-esimo numero di Fibonacci."""
+    if n <= 1:
+        return n
+    else:
+        return calcola_fibonacci(n-1) + calcola_fibonacci(n-2)
+        
+# Test della funzione
+for i in range(10):
+    print(f"Fibonacci({i}) = {calcola_fibonacci(i)}")
+\end{lstlisting}
+
+\section{Citazioni e Riferimenti}
+È possibile utilizzare citazioni nel testo \cite{riferimento1} e creare una bibliografia completa a fine documento. Per citazioni più estese:
+
+\begin{quote}
+    ``Le citazioni estese possono essere formattate in questo modo, utilizzando l'ambiente quote. È possibile aggiungere l'autore della citazione a fine paragrafo.''
+    \begin{flushright}
+        --- Autore della Citazione
+    \end{flushright}
+\end{quote}
+
+\epigraph{È anche possibile utilizzare l'ambiente epigraph per inserire citazioni all'inizio di capitoli o sezioni.}{--- Autore dell'Epigrafe}
+
+\section{Note e Conclusioni}
+Questa sezione può contenere note conclusive o riassuntive del capitolo. È possibile anche inserire note a piè di pagina\footnote{Esempio di nota a piè di pagina.}.

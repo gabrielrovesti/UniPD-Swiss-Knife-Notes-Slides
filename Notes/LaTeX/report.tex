@@ -1,110 +1,238 @@
-
 \documentclass[a4paper,11pt]{report}
+
+% Pacchetti base
 \usepackage[T1]{fontenc}
 \usepackage[english, italian]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[xindy]{imakeidx}
+\usepackage{lmodern}           % Font più moderno
+\usepackage{microtype}         % Miglioramenti tipografici
 \usepackage{xcolor}
+
+% Colori ufficiali UniPD
+\definecolor{unipd-red}{RGB}{167, 30, 34}
+\definecolor{unipd-blue}{RGB}{12, 65, 109}
+\definecolor{unipd-lightblue}{RGB}{133, 176, 213}
+
+% Pacchetti per layout e tipografia
 \usepackage{graphicx}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=2.5cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm,
+  headheight=23.11996pt % Corretto come suggerito nell'errore
+}
+
+% Intestazioni e piè di pagina
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{unipd-blue}{\slshape\leftmark}}
+\fancyhead[R]{\textcolor{unipd-blue}{\thepage}}
+\fancyfoot[C]{\textcolor{unipd-blue}{\small Università degli Studi di Padova}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{unipd-red}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% Pacchetti matematici e simbolici
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{mathtools}
+
+% Gestione elenchi e indici
 \usepackage{etaremune}
 \usepackage{enumitem}
+\usepackage[xindy]{imakeidx}
 \usepackage[toc,page]{appendix}
-\usepackage{verbatimbox}
 
-\usepackage[hidelinks, colorlinks=true]{hyperref}	
-\usepackage{bookmark}
+% Pacchetti per tabelle e figure
+\usepackage{booktabs}          % Tabelle eleganti
 \usepackage{caption}
-\usepackage{subfig}
+\usepackage{subcaption}
+\captionsetup{
+  tableposition=top, 
+  figureposition=bottom, 
+  font=small,
+  labelfont={bf,color=unipd-blue},
+  textfont={it}
+}
 
-\captionsetup{tableposition=top, figureposition=bottom, font=small}
+% Personalizzazione dei titoli
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\color{unipd-red}}
+{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{unipd-blue}}
+{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries\color{unipd-blue}}
+{\thesubsection}{1em}{}
+
+% Citazioni ed epigrafi
+\usepackage{epigraph}
+\usepackage{csquotes}
+
+% Verbatim e codice
+\usepackage{listings}
+\usepackage{verbatimbox}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!10},
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{unipd-blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{unipd-red},
+  breaklines=true,
+  showstringspaces=false
+}
+
+% Hyperlink e PDF
+\usepackage[hidelinks, colorlinks=true]{hyperref}
+\usepackage{bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=unipd-blue,
+  citecolor=unipd-blue,
+  urlcolor=unipd-red,
+  pdftitle={Documento UniPD},
+  pdfauthor={Autore},
+  pdfsubject={Argomento},
+  pdfkeywords={UniPD, latex, template}
+}
+
+% Impostazioni per la profondità degli indici
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
 
-\usepackage{epigraph}
-
+% Creazione indice
 \makeindex
-		
+
+% Definizione manuale dei comandi \frontmatter, \mainmatter, \backmatter per la classe report
+\newcommand{\frontmatter}{%
+  \cleardoublepage
+  \pagenumbering{roman}
+}
+
+\newcommand{\mainmatter}{%
+  \cleardoublepage
+  \pagenumbering{arabic}
+}
+
+\newcommand{\backmatter}{%
+  \cleardoublepage
+}
+
 \begin{document}
 
+% Frontespizio personalizzato
 \begin{titlepage}
     \begin{center}
-        \begin{LARGE}
-            \textbf{University of Padua}\\
-        \end{LARGE}
-
-        \vspace{10pt}
-
-        \begin{Large}
-            \textsc{Department of Mathematics "Tullio Levi-Civita"}\\
-        \end{Large}
-
-        \vspace{10pt}
-
-        \begin{large}
-            \textsc{Master Degree in Computer Science}\\
-        \end{large}
-
-        \vspace{30pt}
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[height=6cm]{unipd-logo}
-        \end{figure}
-        \vspace{30pt}
-
-        \begin{LARGE}
-            \textbf{Title}\\
-        \end{LARGE}
-
-        \vspace{10pt}
-
-        \begin{Large}
-            \text{Course}\\
-            \vspace{40pt}
-            Pinotto Gianni\space- 1234567\\
-            \vspace{10pt}
-            \textsc{Academic year 2024-25}
-        \end{Large}
-
-        \begin{normalsize}
-        \end{normalsize}
+        \vspace*{-1cm}
+        % Logo UniPD
+        \includegraphics[height=3.5cm]{unipd-logo.png}
+        
+        \vspace{0.5cm}
+        {\color{unipd-red}\rule{\textwidth}{1pt}}
+        
+        \vspace{1cm}
+        {\fontsize{20}{24}\selectfont\textcolor{unipd-blue}{\textbf{UNIVERSITÀ DEGLI STUDI DI PADOVA}}}
+        
+        \vspace{0.5cm}
+        {\large\textcolor{unipd-blue}{\textsc{Dipartimento di Matematica "Tullio Levi-Civita"}}}
+        
+        \vspace{0.5cm}
+        {\large\textcolor{unipd-blue}{\textsc{Corso di Laurea Magistrale in Informatica}}}
+        
+        \vspace{2.5cm}
+        {\Huge\textbf{\textcolor{unipd-red}{Titolo del Documento}}}
+        
+        \vspace{0.5cm}
+        {\Large\textit{\textcolor{unipd-blue}{Sottotitolo}}}
+        
+        \vspace{2cm}
+        \begin{minipage}{0.45\textwidth}
+            \begin{flushleft}
+                {\large\textbf{Relatrice/Relatore:}}\\
+                {\large Prof.ssa/Prof. Nome Cognome}
+            \end{flushleft}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \begin{flushright}
+                {\large\textbf{Laureanda/o:}}\\
+                {\large Nome Cognome}\\
+                {\large Matricola: 1234567}
+            \end{flushright}
+        \end{minipage}
+        
+        \vfill
+        {\color{unipd-red}\rule{\textwidth}{1pt}}
+        \vspace{0.5cm}
+        {\large Anno Accademico 2024/2025}
     \end{center}
 \end{titlepage}
 
+% Frontmatter
+\frontmatter
 
-\hypersetup{linkcolor=black}
+% Dedicatoria (opzionale)
+\cleardoublepage
+\vspace*{\stretch{1}}
+\begin{flushright}
+\textit{Dedica opzionale}
+\end{flushright}
+\vspace*{\stretch{3}}
+\cleardoublepage
+
+% Abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+Inserire qui l'abstract del documento.
+
+% Ringraziamenti (opzionali)
+\chapter*{Ringraziamenti}
+\addcontentsline{toc}{chapter}{Ringraziamenti}
+Inserire qui i ringraziamenti.
+
+% Indice
 \tableofcontents
+\cleardoublepage
 
-\newpage
+% Lista delle figure (opzionale)
+\listoffigures
+\cleardoublepage
 
-\hypersetup{linkcolor=blue, urlcolor=blue}
+% Lista delle tabelle (opzionale)
+\listoftables
+\cleardoublepage
 
+% Mainmatter
+\mainmatter
+
+% Capitoli
 \include{capitoli/capitolo1}
+\include{capitoli/capitolo2}
+% Includere altri capitoli secondo necessità
 
+% Backmatter
+\backmatter
+
+% Bibliografia
+\chapter{Bibliografia}
+\input{biblio/biblio}
+
+% Appendici
 \begin{appendices}
-
-\include{appendici/Appendice1}
-
+\include{appendici/appendice1}
+% Includere altre appendici secondo necessità
 \end{appendices}
 
-%\newpage
-	\input{biblio/biblio}
+% Indice analitico
+\printindex
 
-\end{document}	
-
-
-
-
-\renewcommand{\maketitle}{
-    \begin{titlepage}
-    \begin{center}
-    \includegraphics[width=8cm]{unipd-logo.png}\\[2cm]
-    \Large\textbf{Lorem ipsum}\\[1em]
-    \large\textit{Master's Thesis}\\[2cm]
-    \Large\textbf{University of Padua}\\[1em]
-    Department of Mathematics "Tullio Levi-Civita"\\[1em]
-    Master Degree in Computer Science\\[2cm]
-    \end{center}
-    \end{titlepage}
-}
+\end{document}
