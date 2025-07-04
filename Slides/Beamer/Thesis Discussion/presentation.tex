@@ -1,0 +1,371 @@
+\documentclass[10pt,aspectratio=169]{beamer}
+
+% Essential packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Use official University of Padua theme
+\usetheme[pageofpages=of]{Unipd}
+
+% Title and author information
+\title{AccessibleHub - Designing an accessibility learning toolkit}
+\subtitle{Bridging the gap between guidelines and implementation}
+\author[Gabriel Rovesti]{\textbf{Graduate}: Gabriel Rovesti}
+\institute[Dept. Mathematics - UniPD]{Department of Mathematics ``Tullio Levi-Civita'' - Master Degree in Computer Science}
+\date{July 2025}
+
+% Supervisor information
+\newcommand{\supervisor}{Prof. Ombretta Gaggi}
+\newcommand{\academicyear}{Academic Year 2024-2025 - Graduation Session: 25/07/2025}
+
+\begin{document}
+
+% Title slide
+\begin{frame}[plain]
+    \usebeamercolor[fg]{title page}
+    \begin{center}
+        \vspace{0.3cm}
+        {\Huge \textcolor{white}{\textbf{\inserttitle}}}
+        
+        \vspace{0.3cm}
+        {\Large \textcolor{white}{\insertsubtitle}}
+        
+        \vspace{1cm}
+        {\large \textcolor{white} \insertauthor}
+        
+        \vspace{0.3cm}
+        {\large \textcolor{white}{\textbf{Supervisor:} \supervisor}}
+
+        \vspace{1cm}
+        {\normalsize \textcolor{white}{\insertinstitute}}
+        
+        \vspace{0.3cm}
+        {\normalsize \textcolor{white}{\academicyear}}
+    \end{center}
+\end{frame}
+
+% Table of contents
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+% Section 1: Context and Motivation
+\section{Research Context \& Motivation}
+
+\begin{frame}{Research Context \& Motivation}
+    \begin{columns}[c]
+        \begin{column}{0.6\textwidth}
+            \textbf{The Scale}
+            \begin{itemize}
+                \item 1+ billion people with disabilities globally
+                \item 7 billion mobile device users
+                \item Explosive growth in mobile applications
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            
+            \textbf{The Problem}
+            \begin{itemize}
+                \item Abstract WCAG guidelines exist
+                \item Limited practical implementation guidance
+                \item Gap between theory and mobile development
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{block}{Evidence}
+                \begin{itemize}
+                    \item 22/57 EU public apps fail accessibility
+                    \item 30\% of Android apps have accessibility issues
+                    \item Developers struggle with implementation
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.3cm}
+    \begin{alertblock}{Core Challenge}
+        How do we bridge the gap between abstract accessibility guidelines and concrete mobile implementation?
+    \end{alertblock}
+\end{frame}
+
+% Section 2: Research Questions & Contributions
+\section{Research Questions \& Contributions}
+
+\begin{frame}{Research Questions \& Contributions}
+    \begin{columns}[c]
+        \begin{column}{0.6\textwidth}
+            \textbf{Primary Research Questions}
+            \begin{enumerate}
+                \item How can we systematically evaluate accessibility implementation across frameworks?
+                \item What design patterns optimize both accessibility and developer experience?
+                \item How effective are theory-informed educational approaches?
+            \end{enumerate}
+            
+            \vspace{0.5cm}
+            
+            \textbf{Research Contributions}
+            \begin{itemize}
+                \item Novel evaluation framework with 6 formal metrics
+                \item First systematic quantitative comparison of React Native vs Flutter
+                \item AccessibleHub: Open-source learning toolkit
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{block}{Innovation}
+                \textbf{Theory-Practice Bridge}
+                \begin{itemize}
+                    \item WCAG2Mobile mapping
+                    \item Quantitative metrics
+                    \item Educational design theory
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Section 3: Methodological Innovation
+\section{Methodological Innovation}
+
+\begin{frame}{Methodological Innovation}
+    \begin{columns}[c]
+        \begin{column}{0.65\textwidth}
+            \textbf{Six Formal Accessibility Metrics}
+            \begin{enumerate}
+                \item \textbf{CAS}: Component Accessibility Score
+                \item \textbf{WCR}: WCAG Compliance Rate
+                \item \textbf{SRSS}: Screen Reader Support Score
+                \item \textbf{IMO}: Implementation Overhead
+                \item \textbf{API}: Accessibility API Coverage
+                \item \textbf{DTE}: Development Time Efficiency
+            \end{enumerate}
+            
+            \vspace{0.3cm}
+            
+            \textbf{WCAG2Mobile Integration}
+            \begin{itemize}
+                \item Direct mapping: WCAG 2.1 AA success criteria $\to$ mobile components
+                \item Weighted scoring based on impact and frequency
+                \item Cross-platform consistency validation
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \begin{block}{Formula}
+                \small
+                $CAS = \frac{\sum_{i=1}^{n} w_i \cdot c_i}{\sum_{i=1}^{n} w_i}$
+                
+                \vspace{0.2cm}
+                
+                $WCR = \frac{|S_p|}{|S_t|} \times 100\%$
+                
+                where $S_p =$ passed criteria, $S_t =$ total criteria
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Section 4: AccessibleHub Research Vehicle
+\section{AccessibleHub: Research Vehicle}
+
+\begin{frame}{AccessibleHub: Research Vehicle}
+    \begin{columns}[c]
+        \begin{column}{0.55\textwidth}
+            \textbf{Educational Design Principles}
+            \begin{itemize}
+                \item \textbf{Scaffolded Learning}: Progressive complexity
+                \item \textbf{Theory-Practice Integration}: WCAG $\leftrightarrow$ Code
+                \item \textbf{Multi-Modal}: Visual + Audio + Hands-on
+                \item \textbf{Community-Centered}: Social learning
+            \end{itemize}
+            
+            \vspace{0.4cm}
+            
+            \textbf{Technical Architecture}
+            \begin{itemize}
+                \item React Native foundation
+                \item Expo development workflow
+                \item Cross-platform deployment
+                \item Open-source MIT license
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{block}{Core Features}
+                \begin{itemize}
+                    \item 20+ Interactive components
+                    \item WCAG 2.1 AA compliance
+                    \item Screen reader optimized
+                    \item Real-time testing
+                    \item Community contributions
+                \end{itemize}
+            \end{block}
+            
+            \vspace{0.3cm}
+            
+            \textbf{Availability}
+            \begin{itemize}
+                \item GitHub: gabrielrovesti/AccessibleHub
+                \item Documentation \& guides
+                \item Video tutorials
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Section 5: Implementation Examples
+\section{Implementation Examples}
+
+\begin{frame}[fragile]{Implementation Examples \& Patterns}
+    \begin{columns}[t]
+        \begin{column}{0.48\textwidth}
+            \textbf{React Native Button}
+            \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+<TouchableOpacity
+  accessibilityRole="button"
+  accessibilityLabel="Submit form"
+  accessibilityHint="Validates and submits the current form"
+  onPress={handleSubmit}>
+  <Text>Submit</Text>
+</TouchableOpacity>
+            \end{lstlisting}
+            
+            \vspace{0.3cm}
+            
+            \textbf{Key Patterns}
+            \begin{itemize}
+                \item Explicit semantic roles
+                \item Descriptive labels
+                \item Action hints
+                \item Focus management
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Flutter Button}
+            \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+Semantics(
+  label: 'Submit form',
+  button: true,
+  onTap: () => handleSubmit(),
+  child: ElevatedButton(
+    onPressed: handleSubmit,
+    child: Text('Submit'),
+  ),
+)
+            \end{lstlisting}
+            
+            \vspace{0.3cm}
+            
+            \textbf{Architecture Differences}
+            \begin{itemize}
+                \item Property-based vs Widget-based
+                \item Implicit vs Explicit semantics
+                \item Platform integration approaches
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Section 6: Quantitative Results
+\section{Quantitative Results}
+
+\begin{frame}{Quantitative Results}
+    \begin{columns}[c]
+        \begin{column}{0.6\textwidth}
+            \textbf{AccessibleHub Performance}
+            \begin{itemize}
+                \item \textbf{CAS}: 100\% component implementation (20/20)
+                \item \textbf{WCR}: 88\% WCAG 2.1 AA compliance
+                \item \textbf{SRSS}: 4.3/5.0 average (VoiceOver + TalkBack)
+                \item \textbf{IMO}: 23.3\% average implementation overhead
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            
+            \textbf{Framework Comparison Results}
+            \begin{itemize}
+                \item React Native: 38\% default accessible components
+                \item Flutter: 32\% default accessible components
+                \item React Native: 45\% less implementation code
+                \item Screen reader consistency: React Native advantage
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{block}{Key Metrics}
+                \begin{tabular}{|l|c|}
+                    \hline
+                    \textbf{Metric} & \textbf{Score} \\
+                    \hline
+                    CAS & 100\% \\
+                    WCR & 88\% \\
+                    SRSS & 4.3/5.0 \\
+                    IMO & 23.3\% \\
+                    \hline
+                \end{tabular}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Section 7: Conclusions
+\section{Conclusions}
+
+\begin{frame}{Conclusions}
+    \begin{columns}[c]
+        \begin{column}{0.6\textwidth}
+            \textbf{Research Contributions}
+            \begin{enumerate}
+                \item \textbf{Methodological}: Novel evaluation framework with 6 formal metrics
+                \item \textbf{Practical}: AccessibleHub toolkit with theory-informed design
+                \item \textbf{Empirical}: First systematic quantitative framework comparison
+            \end{enumerate}
+            
+            \vspace{0.5cm}
+            
+            \textbf{Future Research Directions}
+            \begin{itemize}
+                \item Framework expansion: SwiftUI, Jetpack Compose
+                \item User studies: Developer effectiveness measurement
+                \item Automation: CI/CD pipeline integration
+                \item Community: Open source ecosystem development
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{alertblock}{Impact}
+                \textbf{Theory-Practice Bridge}
+                \begin{itemize}
+                    \item Quantitative accessibility metrics
+                    \item Open-source educational toolkit
+                    \item Evidence-based framework decisions
+                \end{itemize}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Final slide
+\begin{frame}[plain]
+    \begin{center}
+        \Huge Thank You
+        
+        \vspace{1cm}
+        
+        \Large Questions \& Discussion
+        
+        \vspace{1cm}
+        
+        \normalsize
+        Gabriel Rovesti \\
+        gabriel.rovesti@studenti.unipd.it \\
+        GitHub: gabrielrovesti/AccessibleHub
+    \end{center}
+\end{frame}
+
+\end{document}
